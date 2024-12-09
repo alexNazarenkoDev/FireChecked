@@ -1,0 +1,246 @@
+.hero {
+    padding: 170rem 0 40rem;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: 420rem;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-size: cover;
+        width: 100%;
+        max-width: 1440rem;
+        height: 1073rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='1440' height='1073' viewBox='0 0 1440 1073' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M621.577 197.696C803.602 181.312 1195.38 -17.7589 1334.5 2.15853C1499.31 25.7566 1478.23 132.975 1499.95 238.315C1521.51 342.932 1709.45 944.467 1604.43 1049.85C1491.67 1162.99 1068.34 808.907 876.335 864.081C677.513 921.214 488.678 890.602 300.381 837.447C48.6788 825.807 -41.5759 1109.47 -82.1041 1005.37C-127.275 889.334 -274.793 153.787 -119.599 43.822C35.2351 -65.888 304.802 226.209 621.577 197.696Z' fill='url(%23paint0_linear_5_61)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_5_61' x1='687.319' y1='43.9688' x2='880.042' y2='864.021' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2362CE71'/%3E%3Cstop offset='1' stop-color='%23076444'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+
+    &-title {
+        text-align: center;
+        font: 700 83rem/normal $AeonikTRIALBold;
+        color: $default;
+        margin-bottom: 10rem;
+
+        span {
+            color: $primary;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        max-width: 658rem;
+        margin: 0 auto;
+        font: 400 16rem/160% $AeonikTRIAL;
+        color: rgba($default, .6);
+        margin-bottom: 30rem;
+    }
+
+    &-media {
+        max-width: 989rem;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            margin: 0 15rem;
+        }
+    }
+
+}
+.about {
+    .subtitle-section {
+        color: $white;
+    }
+
+    .title-section {
+        color: $white;
+    }
+
+    .top-section {
+        margin-bottom: 32rem;
+    }
+
+    &-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: 1020rem;
+    }
+
+    &-item {
+        width: calc(33.33333% - 16rem);
+        margin: 0 8rem 15rem;
+        padding: 18rem 22rem 32rem;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+        background-color: $white;
+        border-radius: 25rem;
+
+        &__media {
+            margin-bottom: 15rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__title {
+            font: 700 20rem/140% $AeonikTRIALBold;
+            margin-bottom: 15rem;
+            color: $default;
+        }
+
+        &__text {
+            font: 400 16rem/160% $AeonikTRIAL;
+            color: rgba($default, .52);
+        }
+    }
+}
+.document {
+    padding: 0;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: -200rem;
+        right: 0;
+        z-index: -1;
+        background-size: cover;
+        width: 100%;
+        max-width: 811rem;
+        height: 1276rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='811' height='1276' viewBox='0 0 811 1276' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1153.55 759.5C980.756 729.649 717.5 995.5 386.5 995.5C121.02 995.5 -40.1312 873.392 9.88483 617.301C87.9864 217.408 430.993 304.454 576.436 261.286C720.534 218.517 1004.79 -62.9032 1153.55 13.3712C1279.88 78.1463 1170.6 705.215 1244.99 810.179C1325.71 924.087 1475.49 1043.75 1430.18 1153.21C1385.01 1262.35 1188.35 1240.09 1052.9 1274.24C932.057 1304.7 1287.9 782.711 1153.55 759.5Z' fill='url(%23paint0_linear_5_86)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_5_86' x1='840.928' y1='463.608' x2='534.012' y2='1311.7' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2362CE71'/%3E%3Cstop offset='1' stop-color='%23086444'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+
+    &-inner {
+        max-width: 590rem;
+        min-height: 742rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title-section {
+        margin-bottom: 35rem;
+    }
+
+    .text-section {
+        margin-bottom: 25rem;
+    }
+
+    &-media {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        img {
+            width: 755.84rem;
+            height: 742.12rem;
+        }
+    }
+}
+.management {
+    padding: 180rem 0 120rem;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: '';
+        top: -200rem;
+        left: 0;
+        z-index: -1;
+        background-size: cover;
+        width: 100%;
+        max-width: 783rem;
+        height: 1270rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='783' height='1270' viewBox='0 0 783 1270' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M-578.858 1182.67C-734.249 1040.5 -743.28 801.323 -721.433 591.809C-698.731 374.099 -659.027 103.18 -457.399 17.8647C-259.64 -65.8127 -85.0418 181.488 122.989 234.509C284.578 275.695 475.94 177.767 601.295 287.699C740.087 409.414 821.884 620.552 762.608 795.432C706.557 960.795 489.252 979.667 337.475 1066.03C219.32 1133.26 119.701 1220.81 -15.1418 1237.98C-209.867 1262.76 -434.073 1315.13 -578.858 1182.67Z' fill='url(%23paint0_linear_5_87)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_5_87' x1='2942.09' y1='72.5429' x2='1501.17' y2='-1600.68' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2362CE71'/%3E%3Cstop offset='1' stop-color='%23086444'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between
+    }
+
+    &-media {
+        position: relative;
+        width: 100%;
+        max-width: 628rem;
+
+        .big {
+            width: 628rem;
+            height: 488rem;
+            object-fit: cover;
+        }
+
+        .small {
+            position: absolute;
+            right: -60rem;
+            top: 217rem;
+            width: 241rem;
+            height: 487rem;
+            object-fit: cover;
+        }
+    }
+
+    &-inner {
+        width: 100%;
+        max-width: 557rem;
+    }
+
+    .subtitle-section, .title-section {
+        margin-bottom: 16rem;
+    }
+
+    .text-section {
+        margin-bottom: 25rem;
+        font: 400 16rem/180% $AeonikTRIAL;
+    }
+}
+.future {
+    padding: 120rem 0;
+    position: relative;
+    .container {
+        text-align: center;
+    }
+
+    .title-section {
+        margin-bottom: 15rem;
+    }
+
+    .text-section {
+        max-width: 716rem;
+        margin: 0 auto 100rem;
+    }
+
+    &-media{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        img{
+            width: 239.99rem;
+            height: 229.9rem;
+            object-fit: cover;
+        }
+    }
+    &-line{
+        position: absolute;
+        left:0;
+        bottom: 100rem;
+        z-index: -1;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+}

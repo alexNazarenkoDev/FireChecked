@@ -1,0 +1,262 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: $Montserrat;
+    color: $default;
+    background-color: $white;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x: hidden;
+    font-size: 16rem;
+
+    &.is-scroll {
+        overflow: hidden;
+    }
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: $Montserrat;
+}
+h1 {
+  font-size: 72rem;
+  line-height: 72rem;
+  color: $default;
+}
+
+h2 {
+  font-size: 48rem;
+  line-height: 48rem;
+  color: $default;
+}
+
+h3 {
+  font-size: 18rem;
+  line-height: 26rem;
+  color: $default;
+}
+
+h4 {
+  font-size: 16rem;
+  line-height: 28rem;
+  color: $default;
+}
+
+h5 {
+  font-size: 16rem;
+  line-height: 26rem;
+  color: $default;
+}
+
+h6 {
+  font-size: 14rem;
+  line-height: 21rem;
+  color: $default;
+}
+
+p {
+  font-size: 18rem;
+}
+
+img {
+  display: block;
+  //width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+section {
+  position: relative;
+  padding: 40px 0;
+  z-index: 1;
+}
+
+.section {
+  position: relative;
+  padding: 100px 0;
+}
+
+.row.min {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.row.min > div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.overflow {
+  overflow: hidden !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+span,
+.icon {
+  transition: all 150ms ease;
+}
+button{
+  cursor: pointer;
+}
+
+
+input, textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.btn-primary {
+    color: $default;
+    font: 400 16rem/normal $AeonikTRIAL;
+    padding: 13rem 29rem;
+    min-width: 170rem;
+    text-align: center;
+    border: 1rem solid $black;
+    border-radius: 40rem;
+    position: relative;
+    background-color: $white;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 120%;
+        top: 150%;
+        border-radius: 50%;
+        width: 250%;
+        height: 250%;
+        background-color: $primary;
+        z-index: -1;
+        transition: all ease 500ms;
+    }
+
+    &:hover {
+        color: $white;
+        border-color: $primary;
+
+        &:before {
+            right: -140%;
+            top: -80%;
+            margin: 0 auto;
+            left: auto;
+        }
+    }
+}
+.btn-secondary {
+    color: $white;
+    font: 400 16rem/normal $AeonikTRIAL;
+    padding: 13rem 29rem;
+    min-width: 170rem;
+    text-align: center;
+    border: 1rem solid $primary;
+    border-radius: 40rem;
+    position: relative;
+    background-color: $primary;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before {
+        position: absolute;
+        content: '';
+        right: 0;
+        left: 120%;
+        top: 150%;
+        border-radius: 50%;
+        width: 250%;
+        height: 250%;
+        background-color: $white;
+        z-index: -1;
+        transition: all ease 500ms;
+    }
+
+    &:hover {
+        color: $default;
+        border-color: $default;
+
+        &:before {
+            left: -140%;
+            top: -80%;
+            margin: 0 auto;
+            right: auto;
+        }
+    }
+}
+.top-section{
+    text-align: center;
+}
+.subtitle-section {
+    font: 700 20rem/normal $AeonikTRIALBold;
+    margin-bottom: 10rem;
+    color: $primary;
+    text-transform: uppercase;
+}
+.title-section {
+    font: 700 64rem/normal $AeonikTRIALBold;
+    color: $default;
+}
+.text-section {
+    font: 400 16rem/160% $AeonikTRIAL;
+    color: $default;
+}
+.top-title{
+  font: 700 83.23rem/normal $AeonikTRIALBold;
+  color: $default;
+  span{
+    color: $primary;
+  }
+
+}
+.label{
+  width: 100%;
+  display: block;
+}
+.input{
+  display: block;
+  width: 100%;
+  padding: 12rem 30rem;
+  font: 400 16rem/normal $AeonikTRIAL;
+  color: $default;
+  outline: none;
+  border: 1rem solid #868686;
+  transition: all ease 300ms;
+  border-radius: 40rem;
+  &::placeholder{
+    color: #C3C3C3;
+  }
+  &:focus{
+    border-color: $default;
+  }
+  &.error{
+    border-color: $primary;
+    color: $primary;
+  }
+}

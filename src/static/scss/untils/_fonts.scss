@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../font/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+$Montserrat: 'Montserrat';
+@font-face {
+    font-family: 'Aeonik TRIAL';
+    src: url('../font/AeonikTRIAL-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+$AeonikTRIAL: 'Aeonik TRIAL';
+@font-face {
+    font-family: 'Aeonik TRIAL';
+    src: url('../font/AeonikTRIAL-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$AeonikTRIALBold: 'Aeonik TRIAL';
