@@ -54,7 +54,7 @@ h6 {
 }
 
 p {
-  font-size: 18rem;
+  font-size: 16rem;
 }
 
 img {
@@ -234,6 +234,11 @@ input, textarea {
     color: $primary;
   }
 
+}
+.top-subtitle{
+  font: 700 20rem/normal $AeonikTRIALBold;
+  color: $default;
+  margin-bottom: 8rem;
 }
 .label{
   width: 100%;

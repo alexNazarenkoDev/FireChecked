@@ -57,6 +57,7 @@
 
 }
 .about {
+    z-index: 2;
     .subtitle-section {
         color: $white;
     }
@@ -86,9 +87,10 @@
 
         &__media {
             margin-bottom: 15rem;
-
+            border-radius: 15rem;
             img {
                 width: 100%;
+                border-radius: inherit;
             }
         }
 
