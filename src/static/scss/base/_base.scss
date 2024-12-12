@@ -28,7 +28,10 @@ body {
 html,
 body {
   height: 100%;
-  font-size: calc(100vw / 1440);
+  font-size: calc(100vw / 1920);
+  @media screen and (max-width: 1540px){
+    font-size: calc(100vw / 1540);
+  }
   @media screen and (max-width: 768px){
     font-size: calc(100vw / 393);
   }
