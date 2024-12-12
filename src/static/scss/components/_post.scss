@@ -54,6 +54,8 @@
     justify-content: space-between;
     align-items: center;
     &__nav{
+      width: 100%;
+      max-width: 580rem;
       a{
         width: 100%;
         max-width: 580rem;
@@ -96,11 +98,11 @@
       visibility: hidden;
       z-index: -1;
       &:before, &:after{
-        position: absolute;
-        content: '';
+
       }
       &:before{
-
+        position: absolute;
+        content: '';
         left: -32rem;
         top: 24rem;
         width: 40rem;
@@ -111,27 +113,45 @@
         z-index: -2;
       }
       &:after{
-        border-radius: inherit;
-        top: 0;
-        z-index: -1;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: $white;
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+        content: attr(data-after);
+        font: 700 15rem/140% $AeonikTRIALBold;
+        position: absolute;
+        transform: rotate(-90deg);
+        left: -80rem;
+        top: 50%;
+        color: $white;
       }
+
       &__media{
         margin-bottom: 35rem;
+        img{
+          width: 255rem;
+          height: 259rem;
+          object-fit: cover;
+        }
       }
       &__title{
         font: 700 24rem/normal $AeonikTRIALBold;
         color: $default;
         margin-bottom: 40rem;
+
       }
       &__text{
         font: 400 16rem/160% $AeonikTRIAL;
         color: rgba($default, .52);
         margin-bottom: 40rem;
+        &:after{
+          position: absolute;
+          content: '';
+          border-radius: 25rem;
+          top: 0;
+          z-index: -1;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $white;
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+        }
       }
       &__link{
 
@@ -155,6 +175,8 @@
       opacity: 0;
       visibility: hidden;
       z-index: -1;
+      top: 120rem;
+      transition: top ease 400ms, opacity ease 200ms;
       &__text{
         font: 400 16rem/160% $AeonikTRIAL;
         color: rgba($default, .52);
@@ -162,9 +184,344 @@
       &.active{
         position: relative;
         opacity: 1;
+        top: 0;
         visibility: visible;
         z-index: 1;
       }
+    }
+  }
+}
+.requirement{
+  .subtitle-section{
+    text-align: center;
+    margin-bottom: 40rem;
+  }
+  &-tab{
+    &__nav{
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1061rem;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1rem solid #D3D3D3;
+      }
+      a{
+        font: 400 20rem/140% $AeonikTRIALBold;
+        padding:0 20rem 20rem;
+        color: rgba($default, .35);
+        transition: all ease .3s;
+        position: relative;
+        &:after{
+          position: absolute;
+          content: '';
+          left: 0;
+          top: 100%;
+          height: 2rem;
+          opacity: 0;
+          visibility: hidden;
+          width: 0;
+          background-color: $default;
+          transition: all  ease 300ms;
+        }
+        &.active{
+          color: $default;
+          font-size: 32rem;
+          &:after{
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    &__inner{
+      max-width: 820rem;
+      margin: 70rem  auto 70rem;
+      .tab-item__text{
+        font: 400 16rem/218% $AeonikTRIALBold;
+        color: rgba($default, .35);
+        p{
+          font: 400 16rem/218% $AeonikTRIALBold;
+          color: rgba($default, .35);
+          margin-bottom: 32rem;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.works{
+  padding: 100rem 0;
+  .subtitle-section{
+    text-align: center;
+  }
+  .title-section{
+    margin-bottom: 100rem;
+    text-align: center;
+  }
+  &-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: responsibility-counter;
+    position: relative;
+    margin-bottom: 60rem;
+  }
+  &-column{
+    &:nth-child(1){
+      .works-item{
+        margin-bottom: 125rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+    &:nth-child(2){
+      .works-item{
+        margin-bottom: 55rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &-item{
+    max-width: 352rem;
+    counter-increment: responsibility-counter;
+    position: relative;
+
+    &:before{
+      position: absolute;
+      left: 0;
+      top: -34rem;
+      font: 700 32rem/140% $AeonikTRIALBold;
+      content: counter(responsibility-counter, decimal-leading-zero);
+      color: $primary;
+    }
+
+    &__title{
+      font: 700 32rem/140% $AeonikTRIALBold;
+      color: $default;
+      margin-bottom: 15rem;
+    }
+    &__text{
+      font: 400 16rem/160% $AeonikTRIAL;
+      color: rgba($default, .52);
+      p, b{
+        margin-bottom: 10rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      b{
+        color: $default;
+      }
+      li{
+        position: relative;
+        padding-left: 20rem;
+        margin-bottom: 16rem;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &:before{
+          position: absolute;
+          content: '';
+          left: 3rem;
+          top: 11rem;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          background-color: rgba($default, .52);
+        }
+      }
+    }
+
+  }
+  &-media{
+    max-width: 400rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img{
+      width: 255rem;
+      height: 259rem;
+      object-fit: cover;
+    }
+  }
+  .section-button{
+    text-align: center;
+  }
+}
+.why{
+  .subtitle-section,
+  .title-section{text-align: center}
+  .title-section{
+    margin-bottom: 40rem;
+  }
+  &-wrap{
+    display: flex;
+    max-width: 900rem;
+    margin: 0 auto 40rem;
+    border-radius: 25rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.15);
+  }
+  &-item{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    &.active{
+      .why-item__title{
+        background: linear-gradient(37deg, #62CE71 0%, #076444 100%);
+        font: 700 32rem/114% $AeonikTRIALBold;
+      }
+      .why-item__list{
+        li{
+          &:before{
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 12.5L10 15.5L17 8.5' stroke='%232FA817' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z' stroke='%232FA817' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          }
+          &:after{
+            opacity: 0;
+          }
+        }
+      }
+    }
+    &__title{
+      font: 400 24rem/114% $AeonikTRIAL;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 80rem;
+      background-color: #B6B6B6;
+    }
+    &__list{
+      li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font: 400 16rem/146% $AeonikTRIAL;
+        color: rgba($default, .52);
+        min-height: 90rem;
+        padding:10rem 30rem 10rem 80rem;
+        position: relative;
+        &:nth-child(odd){
+          background-color: #F2F2F2;
+        }
+        &:nth-child(even){
+          background-color: $white;
+        }
+        &:nth-child(4){
+          min-height:158rem ;
+        }
+        &:before{
+          position: absolute;
+          content: '';
+          left: 36rem;
+          top: 50%;
+          margin-top: -12rem;
+          width: 24rem;
+          height: 24rem;
+          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.172 14.828L12.001 12M12.001 12L14.829 9.172M12.001 12L9.172 9.172M12.001 12L14.829 14.828M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z' stroke='%23FF2222' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        &:after{
+          position: absolute;
+          content: '';
+          height: calc(100% - 32rem);
+          top: 16rem;
+          left: 0;
+          width: 1rem;
+          background-color: #AFAFAF;
+        }
+      }
+    }
+  }
+  .section-button{
+    text-align: center;
+  }
+}
+.faq{
+  padding: 120rem 0;
+  .subtitle-section,
+  .title-section{text-align: center}
+  .title-section{
+    margin-bottom: 40rem;
+  }
+  .section-button{
+    text-align: center;
+  }
+  &-wrap{
+    display: flex;
+    justify-content: space-between;
+
+  }
+  &-column{
+    width: 100%;
+    max-width: 625rem;
+    flex-grow: 1;
+  }
+  &-item{
+    width: 100%;
+    border-bottom: 1rem solid #CCCCCC;
+    position: relative;
+    &:last-child{
+      border-bottom-color: transparent;
+    }
+    &.active{
+      .faq-item__title{
+        color: $primary;
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+      .faq-item__info{
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+    }
+    &__title{
+      font: 700 24rem/146% $AeonikTRIALBold;
+      color: $default;
+      padding: 30rem 40rem 30rem 25rem;
+      position: relative;
+      &:after{
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 28rem;
+        width: 40rem;
+        height: 40rem;
+        background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 15L20 25L30 15' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all ease 300ms;
+        transform: rotate(0deg);
+      }
+    }
+    &__info{
+      font: 400 16rem/146% $AeonikTRIAL;
+      color: rgba($default, .52);
+      padding: 0 25rem 30rem;
+      position: absolute;
+      transition: all ease 300ms;
+      opacity: 0;
+      visibility: hidden;
+      z-index: -1;
     }
   }
 }

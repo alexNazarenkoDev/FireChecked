@@ -52,13 +52,15 @@
   &-wrap{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -5rem;
+  }
+  .slide{
+    width: 100%;
+    max-width:25%;
+    padding: 0 5rem 10rem;
   }
   &-item{
     width: 100%;
-    max-width: calc(25% - 10rem);
     border-radius: 25rem;
-    margin: 0 5rem 10rem;
     padding: 42rem 20rem;
     box-shadow: 0px 1px 10.1px rgba(0, 0, 0, 0.15);
     background-color: $white;
